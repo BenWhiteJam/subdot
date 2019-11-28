@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import { ApiPromise, WsProvider } from '@polkadot/api';
+import { ApiRx, ApiPromise, WsProvider } from '@polkadot/api';
 
 const WS_PROVIDER = 'wss://poc3-rpc.polkadot.io/';
-const provider = new WsProvider();
-const api = ApiPromise.create(provider);
+const provider = new WsProvider(WS_PROVIDER);
+const api = ApiRx.create(provider).toPromise();
 
 export default {
   name: 'MainPage',
@@ -23,10 +23,7 @@ export default {
   },
   computed: {
     getHead() {
-      return api.rpc.chain.subscribeNewHeads(header => {
-        console.log(`Chain is at ${header.number}`);
-        return header.number;
-      });
+      return api;
     },
   },
 };
