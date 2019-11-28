@@ -13,14 +13,7 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href:
-          '//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons'
-      }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   /*
@@ -31,15 +24,12 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [
-    { src: 'vue-material/dist/vue-material.min.css', lang: 'css' },
-    { src: '~/assets/theme.scss', lang: 'scss' }
-  ],
+  css: [],
 
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/vue-material' }],
+  plugins: [],
 
   /*
    ** Nuxt.js modules

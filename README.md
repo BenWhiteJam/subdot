@@ -1,6 +1,6 @@
 # subdot
 
-> Implementation of substrate and polkadot
+> Implementatio of Substrate and Polkadot
 
 ## Build Setup
 
