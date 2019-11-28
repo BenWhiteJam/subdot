@@ -7,6 +7,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Environment Variable
+.env
+
 # Runtime data
 pids
 *.pid
@@ -30,6 +33,8 @@ bower_components
 
 # node-waf configuration
 .lock-wscript
+
+
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
@@ -82,3 +87,32 @@ dist
 
 # Service worker
 sw.*
+
+# ---- Legacy gitignore
+
+.DS_Store
+node_modules
+/dist
+
+# local env files
+.env
+.old_env
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+/.firebase/hosting.ZGlzdA.cache
+/firebase-debug.log
+/.env
