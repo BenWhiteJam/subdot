@@ -1,24 +1,80 @@
 module.exports = {
   root: true,
   env: {
-    browser: true,
-    node: true
-  },
-  parserOptions: {
-    parser: 'babel-eslint'
+    node: true,
+    jest: true,
   },
   extends: [
-    '@nuxtjs',
-    'plugin:nuxt/recommended',
+    // 'airbnb-base',
+    'plugin:vue/recommended',
+    'prettier/vue',
     'plugin:prettier/recommended',
-    'prettier',
-    'prettier/vue'
   ],
-  plugins: [
-    'prettier'
-  ],
-  // add your custom rules here
+  // plugins: ['vue', 'prettier'],
   rules: {
-    'nuxt/no-cjs-in-config': 'off'
-  }
-}
+    // 'vue/component-name-in-template-casing': ['error', 'PascalCase'],
+    // 'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    // 'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    // 'no-unused-vars': 'warn',
+    // 'vue/this-in-template': 'off',
+    // 'vue/no-v-html': 'off',
+    // 'no-shadow': 'off',
+    // 'prefer-const': 'off',
+    // 'global-require': 'warn',
+    // 'consistent-return': 'off',
+    // 'vue/require-valid-default-prop': 'off',
+    // 'prefer-destructuring': 'warn',
+    // 'vue/require-default-prop': 'off',
+    // 'vue/no-use-v-if-with-v-for': 'warn',
+    // 'vue/no-side-effects-in-computed-properties': 'warn',
+    // 'vue/valid-v-for': 'off',
+    // 'no-continue': 'warn',
+    // 'no-case-declarations': 'warn',
+    // 'no-new': 'off',
+    // 'no-restricted-globals': 'warn',
+    // 'no-restricted-syntax': 'warn',
+    // 'import/prefer-default-export': 'warn',
+    // 'no-loop-func': 'warn',
+    // 'no-unresolved': 'off',
+    // 'no-extraneous-dependencies': 'off',
+    // 'extensions': 'off',
+    // radix: 'warn',
+    // camelcase: 'warn',
+    // 'no-param-reassign': [
+    //   'error',
+    //   {
+    //     props: true,
+    //     ignorePropertyModificationsFor: [
+    //       'state',
+    //       'acc',
+    //       'e',
+    //       'ctx',
+    //       'req',
+    //       'request',
+    //       'res',
+    //       'response',
+    //       '$scope',
+    //       'app',
+    //     ],
+    //   },
+    // ],
+  },
+  globals: {
+    $nuxt: true,
+  },
+  parserOptions: {
+    sourceType: 'module',
+    parser: 'babel-eslint',
+  },
+  settings: {
+    'import/resolver': 'nuxt',
+    'import/core-modules': [
+      'vue',
+      'vuex',
+      'moment',
+      '@firebase/app',
+      'lodash.orderBy',
+      'dotenv',
+    ],
+  },
+};
